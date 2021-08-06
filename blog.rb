@@ -36,9 +36,13 @@ class Blog
     puts "   #{@name}"
     puts "    -#{@description}"
     puts "\n\n\n"
-    show_posts()
+    posts()
   end
   def timeline
+    posts = @posts.sort
+    posts.each do |post|
+        print_post(post)
+    end
     #show posts sorted by date
   end
 end
