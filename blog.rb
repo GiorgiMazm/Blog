@@ -1,9 +1,3 @@
-require "rspec"
-RSpec.describe "#image" do
-    it "check the image creation" do
-        expect(Image.new("rspec",10,10,"rspec")).to eq()
-    end
-  end
 load("post.rb")
 load("image.rb")
 class Blog
