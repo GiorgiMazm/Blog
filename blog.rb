@@ -16,8 +16,9 @@ class Blog
   end
   def posts
     @posts.each do |post|
-      puts post.title
+      post.print_post
     end
+    return nil
   end
   def number_of_posts
     puts "In this blog are #{@posts.count} posts"
@@ -29,14 +30,14 @@ class Blog
     puts "\n\n\n"
     puts "   #{@name}"
     puts "    -#{@description}"
-    puts "\n\n\n"
     posts()
   end
   def timeline
     posts = @posts.sort
     posts.each do |post|
-        print_post(post)
+        post.print_post
     end
+    return nil
     #show posts sorted by date
   end
 end
