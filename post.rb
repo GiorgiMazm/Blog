@@ -4,8 +4,8 @@ class Post
     def initialize(title, text)
         @title = title
         @text = text
-        @categorie = "News"
-        @imamge = "kein Photo"
+        @categories = "News"
+        @image = "kein Photo"
       end
 
     def add_title(title) 
@@ -24,8 +24,8 @@ class Post
         @text = text
     end
 
-    def add_categorie(categorie) 
-        @categorie = categorie
+    def add_categories(categorie) 
+        @categories = categories
     end
 
     def add_creation_date(creation_date) 
