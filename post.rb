@@ -1,35 +1,23 @@
 class Post 
-    attr_accessor :title, :sub_title, :author, :text, :categorie, :creation_date, :image 
+  attr_accessor :title, :sub_title, :text, :creation_date
+  attr_reader :categories, :images, :author 
 
-    def initialize(title, text)
+    def initialize(title, text, author)
         @title = title
         @text = text
-        @categorie = "News"
-        @imamge = "kein Photo"
+        @categories = []
+        @images = []
+        @creation_date = Time.now
+        @author = author
       end
 
-    def add_title(title) 
-        @title = title
+    def add_category(category) 
+        @categories.push(category)
     end
-
-    def add_sub_title(sub_title) 
-        @sub_title = sub_title
+    def add_image(image)
+        @images.push(image)
     end
-
-    def add_author(author)
-        @author = author
+    def print_post
+        puts @title
     end
-
-    def add_text(text) 
-        @text = text
-    end
-
-    def add_categorie(categorie) 
-        @categorie = categorie
-    end
-
-    def add_creation_date(creation_date) 
-        @creation_date = creation_date
-    end
-
 end

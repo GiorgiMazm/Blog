@@ -1,27 +1,21 @@
 class Image
-    attr_accessor :path, :weight, :describtion, :height, :license, :creator 
+  attr_accessor :license 
+  attr_reader :path, :height, :width, :creator, :description
 
-    def initialize(path)
-        @path = path
-        @license = "Google picture"
-      end
+  def initialize(path, height, width, creator, license="no license", description="")
+    @path = path
+    @height = height
+    @width = width
+    @license = license
+    @creator = creator
+    @description = description
+  end
 
-      def add_size(height, weight) 
-        @height = height
-        @weight = weight
-    end
+  def change_size(height, width) 
+    @height = height
+    @width = width
+  end
+  def show_image
 
-    def add_describtion(describtion) 
-        @describtion = describtion
-    end
-
-    def add_creator(add_creation_date) 
-        @creator = creator
-    end
-
-    def add_linecse(license) 
-        @license = license
-    end
-
+  end
 end
-
