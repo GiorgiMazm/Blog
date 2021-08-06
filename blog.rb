@@ -1,3 +1,11 @@
+require "rspec"
+RSpec.describe "#image" do
+    it "check the image creation" do
+        expect(Image.new("rspec",10,10,"rspec")).to eq()
+    end
+  end
+load("post.rb")
+load("image.rb")
 class Blog
   attr_accessor :name, :description
   attr_reader :posts
@@ -7,14 +15,14 @@ class Blog
     @description = description
   end
   def add_post(post)
-    @posts = @posts << post
+    @posts.push(post)
   end
   def remove_post(post)
-    @posts = @posts.delete(post)
+    @posts.delete(post)
   end
   def show_posts
     @posts.each do |post|
-      puts post
+      puts post.title
     end
   end
   def number_of_posts
@@ -23,11 +31,12 @@ class Blog
   def overwrite_post(oldpost, newpost)
     @posts[@posts.find_index(oldpost)] = newpost
   end
-  def show_blog
-    puts @name
-    puts @description
-    #show blog title / subtitle
-    #show posts
+  def show
+    puts "\n\n\n"
+    puts "   #{@name}"
+    puts "    -#{@description}"
+    puts "\n\n\n"
+    show_posts()
   end
   def show_timeline
     #show posts sorted by date

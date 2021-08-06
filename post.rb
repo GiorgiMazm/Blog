@@ -1,4 +1,4 @@
-class Post 
+class Post
   attr_accessor :title, :sub_title, :text, :creation_date
   attr_reader :categories, :images, :author 
 
