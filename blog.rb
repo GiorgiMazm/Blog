@@ -1,5 +1,7 @@
 load("post.rb")
 load("image.rb")
+load("parrot.rb")
+
 class Blog
   attr_accessor :name, :description
   attr_reader :posts
