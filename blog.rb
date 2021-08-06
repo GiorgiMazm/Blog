@@ -20,7 +20,7 @@ class Blog
   def remove_post(post)
     @posts.delete(post)
   end
-  def show_posts
+  def posts
     @posts.each do |post|
       puts post.title
     end
@@ -38,7 +38,7 @@ class Blog
     puts "\n\n\n"
     show_posts()
   end
-  def show_timeline
+  def timeline
     #show posts sorted by date
   end
 end
