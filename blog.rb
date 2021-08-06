@@ -14,16 +14,18 @@ class Blog
   end
   def show_posts
     @posts.each do |post|
-        puts post
+      puts post
     end
   end
   def number_of_posts
-
+    puts "In this blog are #{@posts.count} posts"
   end
   def overwrite_post(oldpost, newpost)
-    
+    @posts[@posts.find_index(oldpost)] = newpost
   end
   def show_blog
+    puts @name
+    puts @description
     #show blog title / subtitle
     #show posts
   end
