@@ -1,10 +1,11 @@
 class Post 
-    attr_accessor :title, :sub_title, :author, :text, :categorie, creation_date
+    attr_accessor :title, :sub_title, :author, :text, :categorie, :creation_date, :image 
 
     def initialize(title, text)
         @title = title
         @text = text
         @categorie = "News"
+        @imamge = "kein Photo"
       end
 
     def add_title(title) 
