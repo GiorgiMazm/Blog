@@ -29,15 +29,18 @@ class Blog
     @posts[@posts.find_index(oldpost)] = newpost
   end
   def show
+    blogheader()
+    posts()
+  end
+  def blogheader
     puts "\n\n\n"
     puts "   #{@name}"
     puts "    -#{@description}"
-    posts()
   end
   def timeline
-    posts = @posts.sort
-    posts.each do |post|
-        post.print_post
+    blogheader()
+    @posts.sort_by(&:creation_date).reverse.each do |post|
+      post.print_post
     end
     return nil
     #show posts sorted by date

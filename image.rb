@@ -18,7 +18,8 @@ class Image
   def show
     puts "We cant display images, but here is a parrot"
     puts "please wait a moment"
-    sleep(5)
-    Parrot.new(1)
+    sleep(3)
+    Parrot.new(3).show
+    return nil
   end
 end
